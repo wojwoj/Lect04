@@ -8,7 +8,7 @@ public class Lect04 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//MyTask task1 = new MyTask(); 
+		MyTask task1 = new MyTask(); 
 		
 		Thread test1 = new Thread(new Runnable() {
 			public void run() {
@@ -28,7 +28,10 @@ public class Lect04 {
 			}
 		});
 		
+	   new Thread(task1).start();
+		
 		test1.start();
+		
 		
 		try {
 			Thread.sleep(10000);
